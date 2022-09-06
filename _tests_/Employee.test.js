@@ -2,7 +2,7 @@
 
 const Employee = require('../lib/Employee');
 
-// Create new Employee
+// This test will create a new employee and also test that it is properly displaying name, id, and email for that employee
 test('creates a new employee', () => {
     const employee = new Employee('Jorge', 92593, 'jorgegarit@gmail.com') 
 
