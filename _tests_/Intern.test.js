@@ -15,3 +15,10 @@ test("creates a new intern", () => {
     // expected intern school
     expect(intern.school).toEqual(expect.any(String));
 });
+
+// test for new role
+test('return role of Intern', () => {
+    const intern = new Intern('Jorge', 92593, 'jorgegarit@gmail.com', "University of Florida");
+
+    expect(intern.getRole()).toBe("Intern");
+});
