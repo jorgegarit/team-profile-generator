@@ -1,7 +1,7 @@
 // testing with Intern constructor 
 const Intern = require('../lib/Intern');
 
-// Will test new container that includes employee inherited information plus git school
+// Will test new container that includes employee inherited information plus school
 
 test("creates a new intern", () => {
     const intern = new Intern('Jorge', 92593, 'jorgegarit@gmail.com', "University of Florida");
