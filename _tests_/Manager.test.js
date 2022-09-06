@@ -13,5 +13,5 @@ test("creates a new manager", () => {
     // expected manager email
     expect(manager.email).toEqual(expect.any(String));
     // expected manager office number
-    expect(manager.school).toEqual(expect.any(Number));
+    expect(manager.officeNumber).toEqual(expect.any(Number));
 });
