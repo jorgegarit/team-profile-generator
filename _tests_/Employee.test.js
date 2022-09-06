@@ -1,0 +1,15 @@
+//  testing with the Employee constructor
+
+const Employee = require('../lib/Employee');
+
+// Create new Employee
+test('creates a new employee', () => {
+    const employee = new Employee('Jorge', '092593', 'jorgegarit@gmail.com')
+
+    // expected employee name
+    expect(employee.name).toEqual(expect.any(String));
+    // expected employee id
+    expect(employee.id).toEqual(expect.any(Number));
+    // expected employee email
+    expect(employee,email).toEqual(expect.any(String));
+})
