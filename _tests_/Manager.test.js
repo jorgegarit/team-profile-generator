@@ -15,3 +15,10 @@ test("creates a new manager", () => {
     // expected manager office number
     expect(manager.officeNumber).toEqual(expect.any(Number));
 });
+
+// test for new role
+test('return role of Manager', () => {
+    const manager = new Manager('Jorge', 92593, 'jorgegarit@gmail.com', 28);
+
+    expect(manager.getRole()).toBe("Manager");
+});
