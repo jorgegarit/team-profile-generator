@@ -56,6 +56,18 @@ const createEmployees = data => {
         </div>
         `;
     };
+
+    const empArray = [];
+
+    // add manager to array
+    empArray.push(data.filter(employee => employee.getRole() === "Manager").map(manager => createManager(manager)));
+    // add engineer to array
+    empArray.push(data.filter(employee => employee.getRole() === "Engineer").map(engineer => createEngineer(engineer)).join(""));
+    // add intern to array
+    empArray.push(data.filter(employee => employee.getRole() === "Intern").map(intern => createIntern(intern)).join(""));
+
+    // call to return final array with all employees
+    return empArray.join("");
 }
 
 
