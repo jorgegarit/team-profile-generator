@@ -168,16 +168,15 @@ const addEitherEngInt = () => {
         }
     ])
     .then(inputEmployeeData => {
-        if (role === 'Engineer') {
+        if ('role' === 'Engineer') {
             const employee = new Engineer (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.github);
-            // add to array
             empArray.push(employee);
-        } else if (role === 'Intern') {
+        } else if ('role' === 'Intern') {
             const employee = new Intern (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.school);
             empArray.push(employee);
         }
 
-        if (confirmNewEmployee) {
+        if ('confirmNewEmployee' === 'Yes') {
             return addEitherEngInt(empArray);
         } else {
             return empArray;

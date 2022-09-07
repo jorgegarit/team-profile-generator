@@ -10,8 +10,8 @@ const createEmployees = data => {
                     <h3 class="card-title">${manager.getRole()}</h3>
                 </div>
                 <div class="card-body">
-                    <p class="empId>Id: ${manager.id}</p>
-                    <p class="empEmail>Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+                    <p class="empId">Id: ${manager.id}</p>
+                    <p class="empEmail">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
                     <p class="empOfficeNumber">Office Number: ${manager.officeNumber}</p>
                 </div>
             </div>
@@ -29,8 +29,8 @@ const createEmployees = data => {
                     <h3 class="card-title">${engineer.getRole()}</h3>
                 </div>
                 <div class="card-body">
-                    <p class="empId>Id: ${engineer.id}</p>
-                    <p class="empEmail>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                    <p class="empId">Id: ${engineer.id}</p>
+                    <p class="empEmail">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                     <p class="empGitHub">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</p>
                 </div>
             </div>
@@ -48,8 +48,8 @@ const createEmployees = data => {
                     <h3 class="card-title">${intern.getRole()}</h3>
                 </div>
                 <div class="card-body">
-                    <p class="empId>Id: ${intern.id}</p>
-                    <p class="empEmail>Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                    <p class="empId">Id: ${intern.id}</p>
+                    <p class="empEmail">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
                     <p class="empSchool">School: ${intern.school}</p>
                 </div>
             </div>
@@ -87,7 +87,7 @@ const createPage = data => {
     <body>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="text-center bg-danger text-white>Team Profiles</h1>
+                <h1 class="text-center bg-danger text-white">Team Profiles</h1>
             </div>
         </div>
         
