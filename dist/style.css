@@ -4,10 +4,46 @@
 
 body {
     background-color: #CD8162;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .jumbotron {
     background-color: #EE9572;
+    margin: 10px;
+    border: 3px solid #C73F17;
+    border-radius: 15px;
 }
 
 
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #C73F17;
+}
+
+.container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.card {
+    
+    border: 3px solid #C73F17;
+    border-radius: 15px;
+
+}
+.card-header {
+    background-color: #EE9572;
+    border-radius: 15px;
+}
+
+.card-title {
+    color: #C73F17;
+}
+
+a {
+    text-decoration: none;
+}
