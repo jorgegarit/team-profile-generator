@@ -8,8 +8,8 @@ This project was built using Node and Inquirer. A user is able to add employees 
 
 JavaScript, Jest, Node.js, Bootstrap, CSS, and HTML
 
-## Screenshot of Example HTML
-![Screenshot of example](./assets/Screenshot%202022-09-06%20232403.jpg)
+## Sameple HTML Site
+https://jorgegarit.github.io/team-profile-generator/dist/index.html
 
 ## Video of Application
 Please click on the link below to go to the instructional video:
