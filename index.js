@@ -118,6 +118,47 @@ const addEitherEngInt = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What is the employee's email?",
+            validate: inputEmail => {
+                if (inputEmail) {
+                    return true;
+                } else {
+                    console.log("Please enter the employee's email!")
+                    return false;
+                }
+            }  
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: "What is the engineer's github?",
+            when: (input) => input.role === "Engineer",
+            validate: inputGithub => {
+                if (inputGithub) {
+                    return true;
+                } else {
+                    console.log("Please enter the engineer's github!")
+                    return false;
+                }
+            }  
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: "What is the intern's school?",
+            when: (input) => input.role === "Intern",
+            validate: inputSchool => {
+                if (inputSchool) {
+                    return true;
+                } else {
+                    console.log("Please enter the intern's school!")
+                    return false;
+                }
+            }  
+        },
 
     ])
 
