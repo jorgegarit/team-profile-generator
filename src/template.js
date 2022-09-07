@@ -85,14 +85,12 @@ const createPage = data => {
     </head>
 
     <body>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="text-center bg-danger text-white">Team Profiles</h1>
-            </div>
+        <div class="jumbotron jumbotron-fluid bg-dark">
+            <h1 class="text-center">Team Profiles</h1>
         </div>
         
         <!-- Where employees will display -->
-        <div class="container text-center">
+        <div class="container text-center row mx-auto">
             ${createEmployees(data)}
         </div>
     </body>
