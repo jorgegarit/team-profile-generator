@@ -164,24 +164,24 @@ const addEitherEngInt = () => {
             type: 'confirm',
             name: 'confirmNewEmployee',
             message: 'Would you like to add another employee?',
-            default: false 
+            default: true 
         }
     ])
     .then(inputEmployeeData => {
-        if ('role' === 'Engineer') {
-            const employee = new Engineer (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.github);
-            empArray.push(employee);
-        } else if ('role' === 'Intern') {
-            const employee = new Intern (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.school);
-            empArray.push(employee);
+        if (inputEmployeeData.role === 'Engineer') {
+            const engineer = new Engineer (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.github);
+            empArray.push(engineer);
+        } else if (inputEmployeeData.role === 'Intern') {
+            const intern = new Intern (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.school);
+            empArray.push(intern);
         }
-
-        if ('confirmNewEmployee' === 'Yes') {
+        // will restart prompts if yes is answered
+        if (inputEmployeeData.confirmNewEmployee) {
             return addEitherEngInt(empArray);
         } else {
             return empArray;
         }   
-    })
+    });
 };
 
 // function that will create the html page 
