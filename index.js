@@ -196,3 +196,16 @@ const writeFile = data => {
         }
     })
 };
+
+// call to generate html page
+addEmployeeManager()
+    .then(addEitherEngInt)
+    .then(empArray => {
+        return createPage(empArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+});
