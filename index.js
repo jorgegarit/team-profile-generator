@@ -74,3 +74,51 @@ const addEmployeeManager = () => {
         empArray.push(manager);
     })
 };
+
+// prompts for either engineer or intern
+const addEitherEngInt = () => {
+    console.log(`
+    -------------------------------
+
+    Add Remaining Employees to Team
+
+    -------------------------------
+    `);
+
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'role',
+            message: 'Please choose role for next employee',
+            choices: ['Engineer', 'Intern']
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the name of the employee?',
+            validate: inputName => {
+                if (inputName) {
+                    return true;
+                } else {
+                    console.log("Please enter the employee's name!")
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: "What is the employee's ID number?",
+            validate: inputId => {
+                if (inputId) {
+                    return true;
+                } else {
+                    console.log("Please enter the employee's id number!")
+                    return false;
+                }
+            }
+        },
+
+    ])
+
+}
