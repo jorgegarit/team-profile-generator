@@ -68,7 +68,7 @@ const createEmployees = data => {
 
     // call to return final array with all employees
     return empArray.join("");
-}
+};
 
 // this will generate the page 
 const createPage = data => {
@@ -98,8 +98,9 @@ const createPage = data => {
     </body>
     </html>
     `;
-}
+};
 
+module.exports = createPage;
 
     
 
