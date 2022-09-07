@@ -24,7 +24,7 @@ const addEmployeeManager = () => {
                 if (inputName) {
                     return true;
                 } else {
-                    console.log("Please enter the manager's name.")
+                    console.log("Please enter the manager's name!")
                     return false;
                 }
             }
@@ -32,15 +32,45 @@ const addEmployeeManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'What is the managers ID number?',
+            message: "What is the manager's ID number?",
             validate: inputId => {
                 if (inputId) {
                     return true;
                 } else {
-                    console.log("Please enter the manager's id number")
+                    console.log("Please enter the manager's id number!")
                     return false;
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What is the manager's email?",
+            validate: inputEmail => {
+                if (inputEmail) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's email!")
+                    return false;
+                }
+            }  
+        },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: "What is the manager's office phone number?",
+            validate: inputOfficeNumber => {
+                if (inputOfficeNumber) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's office phone number!")
+                    return false;
+                }
+            }  
+        }   
     ])
-}
+    .then(inputManagerData => {
+        const manager = new Manager (inputManagerData.name, inputManagerData.id, inputManagerData.email, inputManagerData.officeNumber);
+        empArray.push(manager);
+    })
+};
