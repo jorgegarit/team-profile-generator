@@ -7,8 +7,14 @@ const createManager = manager => {
                 <h2 class="card-title">${manager.getName()}</h2>
                 <h3 class="card-title">${manager.getRole()}</h3>
             </div>
-
-    `
-    }
+            <div class="card-body">
+                <p class="empId>Id: ${manager.id}</p>
+                <p class="empEmail>Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+                <p class="empOfficeNumber">Office Number: ${manager.officeNumber}</p>
+            </div>
+        </div>
+    </div>
+    `;
+}
     
 
