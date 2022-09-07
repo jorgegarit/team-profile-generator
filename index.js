@@ -159,7 +159,28 @@ const addEitherEngInt = () => {
                 }
             }  
         },
-
+        // verify if more employees need to be added
+        {
+            type: 'confirm',
+            name: 'confirmNewEmployee',
+            message: 'Would you like to add another employee?',
+            default: false 
+        }
     ])
+    .then(inputEmployeeData => {
+        if (role === 'Engineer') {
+            const employee = new Engineer (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.github);
+            // add to array
+            empArray.push(employee);
+        } else if (role === 'Intern') {
+            const employee = new Intern (inputEmployeeData.name, inputEmployeeData.id, inputEmployeeData.email, inputEmployeeData.school);
+            empArray.push(employee);
+        }
 
-}
+        if (confirmNewEmployee) {
+            return addEitherEngInt(empArray);
+        } else {
+            return empArray;
+        }   
+    })
+};
