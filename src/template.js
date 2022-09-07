@@ -70,6 +70,36 @@ const createEmployees = data => {
     return empArray.join("");
 }
 
+// this will generate the page 
+const createPage = data => {
+    return `
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Profiles</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="text-center bg-danger text-white>Team Profiles</h1>
+            </div>
+        </div>
+        
+        <!-- Where employees will display -->
+        <div class="container text-center">
+            ${createEmployees(data)}
+        </div>
+    </body>
+    </html>
+    `;
+}
+
 
     
 
