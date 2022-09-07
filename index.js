@@ -184,3 +184,15 @@ const addEitherEngInt = () => {
         }   
     })
 };
+
+// function that will create the html page 
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("The employee team profile has been completed! Please see index.html for finished product")
+        }
+    })
+};
