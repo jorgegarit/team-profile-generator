@@ -21,19 +21,39 @@ const createManager = manager => {
 const createEngineer = engineer => {
     return `
     <div class="col-4 mt-4">
-    <div class="card emp-card">
-        <div class="card-header bg-dark text-info">
-            <h2 class="card-title">${engineer.getName()}</h2>
-            <h3 class="card-title">${engineer.getRole()}</h3>
-        </div>
-        <div class="card-body">
-            <p class="empId>Id: ${engineer.id}</p>
-            <p class="empEmail>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-            <p class="empGitHub">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</p>
+        <div class="card emp-card">
+            <div class="card-header bg-dark text-info">
+                <h2 class="card-title">${engineer.getName()}</h2>
+                <h3 class="card-title">${engineer.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <p class="empId>Id: ${engineer.id}</p>
+                <p class="empEmail>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                <p class="empGitHub">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</p>
+            </div>
         </div>
     </div>
-</div>
     `;
 }
+
+// html for the intern
+const createIntern = intern => {
+    return `
+    <div class="col-4 mt-4">
+        <div class="card emp-card">
+            <div class="card-header bg-dark text-info">
+                <h2 class="card-title">${intern.getName()}</h2>
+                <h3 class="card-title">${intern.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <p class="empId>Id: ${intern.id}</p>
+                <p class="empEmail>Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                <p class="empSchool">School: ${intern.school}</p>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
     
 
