@@ -2,7 +2,7 @@
 
 ## Description
 
-This project was built using Node and Inquirer. A user is able to add employees to a team memeber base. The employees consist of a Manager, followed by either an engineer or an intern. They can add as many engineers or interns as they choose. They are required to provide the name, id, email, plus additional information for each role. 
+This project was built using Node and Inquirer. A user is able to add employees to a team member base. The employees consist of a Manager, followed by either an engineer or an intern. They can add as many engineers or interns as they choose. They are required to provide the name, id, email, plus additional information for each role. 
 
 ## Built With: 
 
